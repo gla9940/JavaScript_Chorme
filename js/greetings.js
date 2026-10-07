@@ -2,6 +2,7 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 const logoutButton = document.querySelector("#logout-button");
+const todoArea = document.querySelector("#todo-area");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -20,6 +21,7 @@ function showGreetingScreen(username) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
   logoutButton.classList.remove(HIDDEN_CLASSNAME);
   loginForm.classList.add(HIDDEN_CLASSNAME);
+  todoArea.classList.remove(HIDDEN_CLASSNAME);
 }
 
 // 로그아웃 처리
@@ -32,6 +34,7 @@ function onLogoutClick() {
 function showLoginForm() {
   greeting.classList.add(HIDDEN_CLASSNAME);
   logoutButton.classList.add(HIDDEN_CLASSNAME);
+  todoArea.classList.add(HIDDEN_CLASSNAME);
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginInput.value = "";
   loginInput.focus();
